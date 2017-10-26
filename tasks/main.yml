@@ -4,3 +4,4 @@
 - name: debug
   debug:
     msg: "{{ ansible_env }}"
+  register: ansible_env.restart_required
