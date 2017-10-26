@@ -1,7 +1,7 @@
 ---
 # tasks file for common
 
-- name: debug
-  debug:
-    msg: "{{ ansible_env }}"
-  register: ansible_env.restart_required
+- include: increase_swap_file.yml
+- include: setlocale.yml
+- include: update.yml
+- include: common_packages.yml
